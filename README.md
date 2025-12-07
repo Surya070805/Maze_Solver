@@ -36,7 +36,7 @@ This project does not require any server-side dependencies (like Python or Node.
 
 Access the live demo hosted on GitHub Pages:
 
-> 🌐 **[INSERT GITHUB PAGES LIVE LINK HERE]**
+> 🌐 **https://surya070805.github.io/Maze_Solver/**
 
 ### Option 2: Run Locally
 
