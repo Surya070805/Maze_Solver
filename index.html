@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive A* Pathfinding Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>A* Solver: Draw Your Own Maze!</h1>
+    </header>
+
+    <div class="controls">
+        <button id="clearBtn">Clear Maze</button>
+        <select id="algorithmSelect">
+            <option value="astar">A* Algorithm</option>
+            <option value="bfs">Breadth-First Search (BFS)</option>
+            <option value="dfs">Depth-First Search (DFS)</option>
+        </select>
+        <button id="solveBtn">Solve Maze</button>
+
+        <div class="tools" style="margin-top: 10px;">
+            <label><input type="radio" name="tool" value="wall" checked> Draw Walls</label>
+            <label><input type="radio" name="tool" value="start"> Set Start</label>
+            <label><input type="radio" name="tool" value="end"> Set End</label>
+        </div>
+
+        <p>Instructions: Select a tool. Drag to draw walls, or click to set Start/End points.</p>
+    </div>
+
+    <canvas id="mazeCanvas" width="600" height="600"></canvas>
+
+    <div id="statsContainer">
+        <h3>Algorithm Performance comparison</h3>
+        <table id="statsTable" border="1"
+            style="width: 600px; text-align: center; margin-top: 10px; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Time Taken (ms)</th>
+                    <th>Cells Discovered</th>
+                    <th>Path Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts/solvers.js"></script>
+    <script src="scripts/maze_drawer.js"></script>
+</body>
+
+</html>
